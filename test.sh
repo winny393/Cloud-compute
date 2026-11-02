@@ -23,7 +23,7 @@ echo "Your location is $location"
 
 az group create --name "$RG_name" --location "$location"
 az storage account create --name "$STA_name" --resource-group "$RG_name" --location "$location" --sku Standard_LRS --kind StorageV2
-az vm create --resource-group "$RG_name" --name "$VM_name" --image UbuntuLTS --admin-username azureuser --generate-ssh-keys
+az vm create --resource-group "$RG_name" --name "$VM_name" --image Ubuntu2204 --admin-username azureuser --generate-ssh-keys
 
 echo "all resources created successfully"
 
